@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Surprise | Alctars</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop>
+    <source src="shape-of-my-heart.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- LOADER -->
+<div id="loader">
+
+    <div class="loader-heart">
+        ♡
+    </div>
+
+    <p>
+        Preparing your little surprise...
+    </p>
+
+</div>
+
+
+<!-- PIN SCREEN -->
+<section id="pinScreen">
+
+    <div class="pin-decoration decoration-1">♡</div>
+    <div class="pin-decoration decoration-2">✦</div>
+    <div class="pin-decoration decoration-3">♡</div>
+    <div class="pin-decoration decoration-4">✧</div>
+
+    <div class="pin-card">
+
+        <div class="pin-icon">
+            🎀
+        </div>
+
+        <span class="small-label">
+            A SECRET PLACE
+        </span>
+
+        <h1>
+            A Little Place<br>
+            Made For You
+        </h1>
+
+        <p>
+            There is a little surprise waiting
+            for you inside.
+        </p>
+
+        <p class="secret-text">
+            Enter the secret code ♡
+        </p>
+
+        <input
+            type="password"
+            id="pinInput"
+            maxlength="4"
+            inputmode="numeric"
+            placeholder="••••"
+            autocomplete="off"
+        >
+
+        <button id="unlockBtn">
+            Open My Surprise 🎀
+        </button>
+
+        <p id="pinError"></p>
+
+        <div class="pin-hearts">
+            ♡ ♡ ♡
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN WEBSITE -->
+<div id="website">
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="floating-hearts"></div>
+
+        <div class="hero-content">
+
+            <span class="badge">
+                ✦ A LITTLE SURPRISE ✦
+            </span>
+
+            <p class="from-text">
+                from Alctars
+            </p>
+
+            <h1>
+                Just For
+                <span>You</span>
+                ♡
+            </h1>
+
+            <p class="hero-description">
+                Nothing special.
+                Just a tiny corner of the internet
+                made to make you smile.
+            </p>
+
+            <button id="openBookBtn">
+                Open Your Surprise 🎁
+            </button>
+
+            <div class="scroll-hint">
+                <span>scroll to explore</span>
+                <div>↓</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SCRAPBOOK -->
+    <main id="scrapbook">
+
+
+        <!-- CHAPTER 1 -->
+        <section class="chapter intro">
+
+            <div class="paper-card">
+
+                <span class="chapter-number">
+                    01
+                </span>
+
+                <span class="mini-title">
+                    A LITTLE SOMETHING
+                </span>
+
+                <h2>
+                    This Is For You 💗
+                </h2>
+
+                <p>
+                    Honestly, there isn't any special
+                    reason behind this.
+                </p>
+
+                <p>
+                    I just wanted to create something
+                    small, cute, and unexpected
+                    for you.
+                </p>
+
+                <p>
+                    So here's a little surprise,
+                    made with lots of pink,
+                    memories, and a tiny piece
+                    of my heart.
+                </p>
+
+                <div class="signature">
+                    — Alctars ♡
+                </div>
+
+            </div>
+
+            <div class="cover-photo">
+
+                <div class="photo-tape"></div>
+
+                <img src="foto1.jpg" alt="Our memory">
+
+                <span>
+                    a little moment ♡
+                </span>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 2 -->
+        <section class="chapter memories">
+
+            <span class="chapter-number center">
+                02
+            </span>
+
+            <h2 class="section-title">
+                Little Moments 📸
+            </h2>
+
+            <p class="section-subtitle">
+                Some memories deserve to stay forever.
+            </p>
+
+
+            <div class="polaroid-grid">
+
+
+                <div class="polaroid rotate-left">
+
+                    <div class="tape pink"></div>
+
+                    <img src="foto2.jpg" alt="Memory 1">
+
+                    <span>
+                        our favorite memory ♡
+                    </span>
+
+                </div>
+
+
+                <div class="polaroid rotate-right">
+
+                    <div class="tape white"></div>
+
+                    <img src="foto3.jpg" alt="Memory 2">
+
+                    <span>
+                        you make me smile
+                    </span>
+
+                </div>
+
+
+                <div class="polaroid rotate-left small">
+
+                    <div class="tape pink"></div>
+
+                    <img src="foto4.jpg" alt="Memory 3">
+
+                    <span>
+                        one of my favorites
+                    </span>
+
+                </div>
+
+
+                <div class="polaroid rotate-right small">
+
+                    <div class="tape white"></div>
+
+                    <img src="foto5.jpg" alt="Memory 4">
+
+                    <span>
+                        this moment ♡
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 3 -->
+        <section class="chapter letter-section">
+
+            <span class="chapter-number center">
+                03
+            </span>
+
+            <h2 class="section-title">
+                A Little Message 💌
+            </h2>
+
+            <p class="section-subtitle">
+                There's something inside this envelope.
+            </p>
+
+
+            <div class="envelope-container">
+
+
+                <div id="openLetter" class="envelope">
+
+                    <div class="envelope-back"></div>
+
+                    <div class="envelope-front">
+                        <span>
+                            Open Me
+                        </span>
+
+                        <b>
+                            ♡
+                        </b>
+                    </div>
+
+                </div>
+
+
+                <div id="letterPaper" class="letter-paper">
+
+                    <div class="letter-decoration">
+                        ♡
+                    </div>
+
+                    <h3>
+                        Hey, You 💗
+                    </h3>
+
+                    <p>
+                        I didn't really know what to
+                        make for you, so I decided to
+                        make this little surprise.
+                    </p>
+
+                    <p>
+                        Maybe it's simple.
+                        Maybe it's a little silly.
+                        But every part of this was made
+                        just because I wanted to see
+                        you smile.
+                    </p>
+
+                    <p>
+                        Thank you for all the little
+                        moments, random conversations,
+                        laughs, and memories.
+                    </p>
+
+                    <p>
+                        I hope whenever you see this,
+                        you'll remember that somewhere,
+                        someone wanted to make your day
+                        a little happier. 🤍
+                    </p>
+
+                    <span class="letter-signature">
+                        — Alctars
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 4 -->
+        <section class="chapter film-section">
+
+            <span class="chapter-number center">
+                04
+            </span>
+
+            <h2 class="section-title">
+                Our Film Roll 🎞️
+            </h2>
+
+            <p class="section-subtitle">
+                A few frames from our little story.
+            </p>
+
+
+            <div class="film-wrapper">
+
+                <div class="film-roll">
+
+                    <div class="film-sprocket top"></div>
+
+                    <div class="film-frame">
+                        <img src="foto6.jpg" alt="Film memory">
+                    </div>
+
+                    <div class="film-frame">
+                        <img src="foto7.jpg" alt="Film memory">
+                    </div>
+
+                    <div class="film-frame">
+                        <img src="foto8.jpg" alt="Film memory">
+                    </div>
+
+                    <div class="film-sprocket bottom"></div>
+
+                </div>
+
+            </div>
+
+
+            <p class="film-caption">
+                Every frame has a little piece of a memory.
+            </p>
+
+        </section>
+
+
+        <!-- CHAPTER 5 -->
+        <section class="chapter quiz-section">
+
+            <span class="chapter-number center">
+                05
+            </span>
+
+            <h2 class="section-title">
+                Memory Check 🫶
+            </h2>
+
+            <p class="section-subtitle">
+                Let's see if you still remember.
+            </p>
+
+
+            <div class="quiz-box">
+
+
+                <div class="question">
+
+                    <span>
+                        QUESTION 01
+                    </span>
+
+                    <p>
+                        Siapa yang membuat web ini?
+                    </p>
+
+                    <input
+                        type="text"
+                        id="answer1"
+                        placeholder="pacalmu yang paling lucuuu"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <div class="question">
+
+                    <span>
+                        QUESTION 02
+                    </span>
+
+                    <p>
+                        Tanggal jadian kita?
+                    </p>
+
+                    <input
+                        type="text"
+                        id="answer2"
+                        placeholder="sampe salah ak ngambek😡"
+                        autocomplete="off"
+                    >
+
+                </div>
+
+
+                <button id="checkQuiz">
+                    Unlock Special Surprise ✨
+                </button>
+
+
+                <p id="quizResult"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 6 -->
+        <section id="specialMemory" class="chapter special-memory">
+
+            <span class="chapter-number center">
+                06
+            </span>
+
+            <h2 class="section-title">
+                Special Memory 🤍
+            </h2>
+
+            <p class="section-subtitle">
+                You unlocked something special.
+            </p>
+
+
+            <div class="memory-reveal">
+
+                <div class="blur-photo">
+
+                    <img
+                        id="specialPhoto"
+                        src="foto9.jpg"
+                        alt="Special memory"
+                    >
+
+                    <div class="photo-lock">
+                        🔒
+                    </div>
+
+                </div>
+
+
+                <button id="revealBtn">
+                    Reveal Memory ✨
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 7 -->
+        <section class="chapter counter-section">
+
+            <span class="chapter-number center">
+                07
+            </span>
+
+            <h2 class="section-title">
+                A Little Time With You ⏳
+            </h2>
+
+            <p class="section-subtitle">
+                Since March 3, 2026 ♡
+            </p>
+
+
+            <div class="counter-card">
+
+                <div class="counter-item">
+
+                    <h3 id="days">
+                        0
+                    </h3>
+
+                    <span>
+                        Days
+                    </span>
+
+                </div>
+
+
+                <div class="counter-divider">
+                    :
+                </div>
+
+
+                <div class="counter-item">
+
+                    <h3 id="hours">
+                        0
+                    </h3>
+
+                    <span>
+                        Hours
+                    </span>
+
+                </div>
+
+
+                <div class="counter-divider">
+                    :
+                </div>
+
+
+                <div class="counter-item">
+
+                    <h3 id="minutes">
+                        0
+                    </h3>
+
+                    <span>
+                        Minutes
+                    </span>
+
+                </div>
+
+
+                <div class="counter-divider">
+                    :
+                </div>
+
+
+                <div class="counter-item">
+
+                    <h3 id="seconds">
+                        0
+                    </h3>
+
+                    <span>
+                        Seconds
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 8 -->
+        <section class="chapter ending-photo">
+
+            <span class="chapter-number center">
+                08
+            </span>
+
+
+            <div class="final-card">
+
+                <div class="final-photo">
+
+                    <img
+                        src="foto10.jpg"
+                        alt="Final memory"
+                    >
+
+                </div>
+
+
+                <div class="final-content">
+
+                    <span>
+                        ONE MORE THING...
+                    </span>
+
+                    <h2>
+                        You Are My Favorite Chapter 💗
+                    </h2>
+
+                    <p>
+                        Every page becomes a little
+                        more beautiful because you
+                        are somewhere in it.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAPTER 9 -->
+        <section class="chapter secret-section">
+
+            <span class="chapter-number center">
+                09
+            </span>
+
+            <h2 class="section-title">
+                Hidden Message 🌟
+            </h2>
+
+            <p class="hint-text">
+                ✨ Ada pesan rahasia yang sedang menunggu.
+                Coba sentuh semua bintang untuk menemukannya.
+            </p>
+
+
+            <p id="starProgress">
+                Find all the stars (0/5)
+            </p>
+
+
+            <div class="stars-box">
+
+                <div class="star secret-star">
+                    ⭐
+                </div>
+
+                <div class="star secret-star">
+                    ⭐
+                </div>
+
+                <div class="star secret-star">
+                    ⭐
+                </div>
+
+                <div class="star secret-star">
+                    ⭐
+                </div>
+
+                <div class="star secret-star">
+                    ⭐
+                </div>
+
+            </div>
+
+
+            <div id="secretMessage">
+
+                <p>
+                    Aku akan tetap memilihmu,
+                    bahkan ketika dunia sedang
+                    tidak baik-baik saja.
+                </p>
+
+                <h3>
+                    💝🤍
+                </h3>
+
+            </div>
+
+        </section>
+
+
+        <!-- ENDING -->
+        <section class="chapter ending">
+
+            <div class="ending-card">
+
+                <div class="ending-heart">
+                    ♡
+                </div>
+
+                <span>
+                    SURPRISE COMPLETE
+                </span>
+
+                <h2>
+                    That's All For You 🎀
+                </h2>
+
+                <p>
+                    No special occasion.
+                    No complicated reason.
+                </p>
+
+                <p>
+                    I just wanted to make
+                    you smile today.
+                </p>
+
+                <div class="ending-signature">
+                    From Alctars,
+                    just for you. 🤍
+                </div>
+
+                <button id="replayBtn">
+                    Replay Memories 📖
+                </button>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<!-- MUSIC BUTTON -->
+<button id="musicBtn" class="music-btn">
+    ♫
+</button>
+
+
+<!-- BACKGROUND DECORATION -->
+<div id="heartContainer"></div>
+
+
+<script src="script.js"></script>
+
+</body>
+                      </html>
