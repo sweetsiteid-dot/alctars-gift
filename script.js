@@ -1,17 +1,4 @@
 /* =========================
-   ACARA
-========================= */
-
-// Acara      : Buat Senang-Senang Kejutan
-// Lagu       : shapeofmyheart.mp3
-// Tema       : Pink
-// Foto       : 10
-// From       : alctars
-// To         : -
-// PIN        : 1006
-
-
-/* =========================
    LOADER
 ========================= */
 
@@ -19,11 +6,17 @@ window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        document.getElementById("loader").style.opacity = "0";
+        const loader = document.getElementById("loader");
 
-        setTimeout(() => {
-            document.getElementById("loader").style.display = "none";
-        }, 800);
+        if(loader){
+
+            loader.style.opacity = "0";
+
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 800);
+
+        }
 
     }, 1200);
 
@@ -43,18 +36,40 @@ const website = document.getElementById("website");
 
 unlockBtn.addEventListener("click", () => {
 
-    if(pinInput.value === "1006"){
+    const enteredPin = pinInput.value.trim();
 
-        pinScreen.style.display = "none";
-        website.style.display = "block";
+    /* PIN = 1006 */
+
+    if(enteredPin === "1006"){
 
         pinError.innerText = "";
 
+        pinScreen.style.display = "none";
+
+        website.style.display = "block";
+
+        /* Start music after user interaction */
+
+        const music = document.getElementById("bgMusic");
+
+        if(music){
+
+            music.volume = 0.65;
+
+            music.play().catch(() => {
+                console.log("Music waiting for interaction.");
+            });
+
+        }
+
     }else{
 
-        pinError.innerText = "Wrong PIN 💗";
+        pinError.innerText =
+        "Hmm... PIN-nya salah 🥹💗";
 
         pinInput.value = "";
+
+        pinInput.focus();
 
     }
 
@@ -65,19 +80,29 @@ unlockBtn.addEventListener("click", () => {
    OPEN BOOK
 ========================= */
 
-const openBookBtn = document.getElementById("openBookBtn");
+const openBookBtn =
+document.getElementById("openBookBtn");
 
 openBookBtn.addEventListener("click", () => {
 
-    const music = document.getElementById("bgMusic");
+    const music =
+    document.getElementById("bgMusic");
 
-    music.src = "shapeofmyheart.mp3";
+    /* Play music */
 
-    music.play().catch(() => {
-        console.log("Music membutuhkan interaksi pengguna.");
-    });
+    if(music){
 
-    document.getElementById("scrapbook").scrollIntoView({
+        music.volume = 0.65;
+
+        music.play().catch(() => {});
+
+    }
+
+    /* Scroll to scrapbook */
+
+    document
+    .getElementById("scrapbook")
+    .scrollIntoView({
         behavior:"smooth"
     });
 
@@ -88,8 +113,11 @@ openBookBtn.addEventListener("click", () => {
    LETTER OPEN
 ========================= */
 
-const openLetter = document.getElementById("openLetter");
-const letterPaper = document.getElementById("letterPaper");
+const openLetter =
+document.getElementById("openLetter");
+
+const letterPaper =
+document.getElementById("letterPaper");
 
 openLetter.addEventListener("click", () => {
 
@@ -101,9 +129,14 @@ openLetter.addEventListener("click", () => {
 
         letterPaper.style.display = "block";
 
-        letterPaper.scrollIntoView({
-            behavior:"smooth"
-        });
+        setTimeout(() => {
+
+            letterPaper.scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+        },100);
 
     }
 
@@ -111,43 +144,70 @@ openLetter.addEventListener("click", () => {
 
 
 /* =========================
-   BUCIN QUIZ 💗
+   LOVE QUIZ
 ========================= */
 
-const checkQuiz = document.getElementById("checkQuiz");
+const checkQuiz =
+document.getElementById("checkQuiz");
 
 checkQuiz.addEventListener("click", () => {
 
-    const a1 = document
-        .getElementById("answer1")
-        .value
-        .toLowerCase()
-        .trim();
+    const a1 =
+    document
+    .getElementById("answer1")
+    .value
+    .toLowerCase()
+    .trim();
 
-    const a2 = document
-        .getElementById("answer2")
-        .value
-        .toLowerCase()
-        .trim();
+    const a2 =
+    document
+    .getElementById("answer2")
+    .value
+    .toLowerCase()
+    .trim();
 
-    const result = document.getElementById("quizResult");
+    const result =
+    document.getElementById("quizResult");
 
-    const answer1Correct =
-        a1 === "me" ||
-        a1 === "you" ||
-        a1 === "alctars";
 
-    const answer2Correct =
-        a2 === "me" ||
-        a2 === "you" ||
-        a2 === "alctars";
+    /*
+        QUESTION 1:
+        Who is the person you'd choose
+        to annoy forever?
 
-    if(answer1Correct && answer2Correct){
+        ANSWER:
+        Alctars
+    */
 
-        result.style.color = "#E75480";
+
+    /*
+        QUESTION 2:
+        If you had to choose one person
+        to stay with you through everything,
+        who would it be?
+
+        ANSWER:
+        Alctars
+    */
+
+
+    if(
+        (
+            a1 === "alctars" ||
+            a1 === "alctar"
+        )
+        &&
+        (
+            a2 === "alctars" ||
+            a2 === "alctar"
+        )
+    ){
+
+        result.style.color = "#d45d83";
 
         result.innerText =
-            "Correct! You're officially my favorite person 💗😭";
+        "Correct! You really know your favorite person 🥹💗";
+
 
         setTimeout(() => {
 
@@ -157,31 +217,50 @@ checkQuiz.addEventListener("click", () => {
                 behavior:"smooth"
             });
 
-        }, 800);
+        },700);
+
 
     }else{
 
-        result.style.color = "#F06292";
+        result.style.color = "#e06b8d";
 
         result.innerText =
-            "Wrong answer... are you sure? 🥺💔";
+        "Hmm... coba pikirin lagi, sayang 🥹💗";
 
     }
 
 });
 
+
 /* =========================
    REVEAL MEMORY
 ========================= */
 
-const revealBtn = document.getElementById("revealBtn");
+const revealBtn =
+document.getElementById("revealBtn");
 
 revealBtn.addEventListener("click", () => {
 
-    const specialPhoto =
-        document.getElementById("specialPhoto");
+    const photo =
+    document.getElementById("specialPhoto");
 
-    specialPhoto.classList.add("show");
+    photo.classList.add("show");
+
+    revealBtn.innerText =
+    "Memory Revealed ♡";
+
+    revealBtn.style.transform =
+    "scale(0.98)";
+
+    setTimeout(() => {
+
+        revealBtn.innerText =
+        "You Found It 💗";
+
+        revealBtn.style.transform =
+        "scale(1)";
+
+    },500);
 
 });
 
@@ -192,47 +271,80 @@ revealBtn.addEventListener("click", () => {
 
 function updateCounter(){
 
-    const startDate =
-        new Date("2026-03-03T00:00:00");
+    /*
+        Relationship started:
+        3 March 2026
+    */
 
-    const now = new Date();
+    const startDate =
+    new Date("2026-03-03T00:00:00");
+
+    const now =
+    new Date();
 
     const diff =
-        now.getTime() -
-        startDate.getTime();
+    now.getTime() -
+    startDate.getTime();
+
+
+    if(diff < 0){
+
+        document.getElementById("days").innerText = "0";
+
+        document.getElementById("hours").innerText = "0";
+
+        document.getElementById("minutes").innerText = "0";
+
+        return;
+
+    }
+
+
+    /* Total days */
 
     const days =
-        Math.floor(
-            diff /
-            (1000 * 60 * 60 * 24)
-        );
+    Math.floor(
+        diff /
+        (1000 * 60 * 60 * 24)
+    );
+
+
+    /* Total hours */
 
     const hours =
-        Math.floor(
-            diff /
-            (1000 * 60 * 60)
-        );
+    Math.floor(
+        diff /
+        (1000 * 60 * 60)
+    );
+
+
+    /* Total minutes */
 
     const minutes =
-        Math.floor(
-            diff /
-            (1000 * 60)
-        );
+    Math.floor(
+        diff /
+        (1000 * 60)
+    );
+
 
     document.getElementById("days").innerText =
-        days;
+    days;
 
     document.getElementById("hours").innerText =
-        hours;
+    hours;
 
     document.getElementById("minutes").innerText =
-        minutes;
+    minutes;
 
 }
 
+
 updateCounter();
 
-setInterval(updateCounter,1000);
+setInterval(
+    updateCounter,
+    1000
+);
 
 
 /* =========================
@@ -244,35 +356,76 @@ document.querySelectorAll(".secret-star");
 
 let clickedStars = 0;
 
-stars.forEach(star => {
+
+stars.forEach((star,index) => {
 
     star.addEventListener("click", () => {
 
-        if(!star.classList.contains("active")){
+        /*
+            Prevent the same star
+            from being counted twice.
+        */
 
-            star.classList.add("active");
+        if(
+            !star.classList.contains("found")
+        ){
+
+            star.classList.add("found");
 
             clickedStars++;
 
-            star.style.transform =
-                "scale(1.5)";
 
-            star.style.opacity =
-                "0.7";
+            /* Update progress */
+
+            document
+            .getElementById("starProgress")
+            .innerText =
+            `Find all the stars (${clickedStars}/5)`;
+
+
+            /* Small animation */
+
+            star.style.transform =
+            "scale(1.35) rotate(10deg)";
+
+
+            setTimeout(() => {
+
+                star.style.transform =
+                "scale(1.15) rotate(10deg)";
+
+            },200);
 
         }
 
+
+        /* All stars found */
+
         if(clickedStars >= 5){
 
-            document
-            .getElementById("secretMessage")
-            .style.display = "block";
+            const secretMessage =
+            document.getElementById(
+                "secretMessage"
+            );
+
+            secretMessage.style.display =
+            "block";
+
 
             document
-            .getElementById("secretMessage")
-            .scrollIntoView({
-                behavior:"smooth"
-            });
+            .getElementById("starProgress")
+            .innerText =
+            "You found them all! ♡";
+
+
+            setTimeout(() => {
+
+                secretMessage.scrollIntoView({
+                    behavior:"smooth",
+                    block:"center"
+                });
+
+            },500);
 
         }
 
@@ -290,10 +443,26 @@ document.getElementById("replayBtn");
 
 replayBtn.addEventListener("click", () => {
 
+    /* Scroll to top */
+
     window.scrollTo({
         top:0,
         behavior:"smooth"
     });
+
+
+    /* Play music again */
+
+    const music =
+    document.getElementById("bgMusic");
+
+    if(music){
+
+        music.currentTime = 0;
+
+        music.play().catch(() => {});
+
+    }
 
 });
 
@@ -302,12 +471,54 @@ replayBtn.addEventListener("click", () => {
    ENTER KEY PIN
 ========================= */
 
-pinInput.addEventListener("keypress", (e) => {
+pinInput.addEventListener(
+    "keypress",
+    (e) => {
 
-    if(e.key === "Enter"){
+        if(e.key === "Enter"){
 
-        unlockBtn.click();
+            unlockBtn.click();
+
+        }
 
     }
+);
 
-});
+
+/* =========================
+   ENTER KEY QUIZ
+========================= */
+
+const answer1 =
+document.getElementById("answer1");
+
+const answer2 =
+document.getElementById("answer2");
+
+
+answer1.addEventListener(
+    "keypress",
+    (e) => {
+
+        if(e.key === "Enter"){
+
+            answer2.focus();
+
+        }
+
+    }
+);
+
+
+answer2.addEventListener(
+    "keypress",
+    (e) => {
+
+        if(e.key === "Enter"){
+
+            checkQuiz.click();
+
+        }
+
+    }
+);
