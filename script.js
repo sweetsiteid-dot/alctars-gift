@@ -176,7 +176,7 @@ checkQuiz.addEventListener("click", () => {
         to annoy forever?
 
         ANSWER:
-        Alctars
+        Putra
     */
 
 
@@ -187,19 +187,19 @@ checkQuiz.addEventListener("click", () => {
         who would it be?
 
         ANSWER:
-        Alctars
+        Putra
     */
 
 
     if(
         (
-            a1 === "alctars" ||
-            a1 === "alctar"
+            a1 === "putra" ||
+            a1 === "Putra"
         )
         &&
         (
-            a2 === "alctars" ||
-            a2 === "alctar"
+            a2 === "Putra" ||
+            a2 === "putra"
         )
     ){
 
